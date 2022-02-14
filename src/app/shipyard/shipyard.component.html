@@ -1,0 +1,52 @@
+<div class="row">
+  <div class="col-sm-12">
+    <img src="assets/images/surrealistic_ground.jpg" alt="Sila Jumbotron" class="img-fluid"/>
+  </div>
+</div>
+<app-object-in-construction [someInput]="userUnits" [objectToDisplay]="objectToDisplay"></app-object-in-construction>
+<div class="container">
+  <div class="row">
+    <div *ngFor="let unit of userUnits" class="col-sm-3 text-center bordered">
+      <div class="my-2">
+        <div class="overlay">
+          <!-- <div class="picture"> -->
+            <img src="assets/images/metal_mine.jpg" alt="Ship item" class="img-fluid" />
+          <!-- </div> -->
+          <div class="pictured">
+            <div class="popup_content">
+              <p>{{ this.valueFormatter.formatBackIdToTitleValue(unit[3]) }} quantity {{ unit[4] }}</p>
+              <div class="row">
+                <div class="col-sm-4">
+                  <img src="assets/images/metal.jpg" alt="Metal Ressource" class="img-fluid ressource" />
+                </div>
+                <div class="col-sm-4">
+                  <img src="assets/images/metal.jpg" alt="Crystal Ressource" class="img-fluid ressource" />
+                </div>
+                <div class="col-sm-4">
+                  <img src="assets/images/metal.jpg" alt="Gas Ressource" class="img-fluid ressource" />
+                </div>
+              </div>
+              <div class="row textColorWhite">
+                <div class="col-sm-4">
+                  {{ unit[0] }}
+                </div>
+                <div class="col-sm-4">
+                  {{ unit[1] }}
+                </div>
+                <div class="col-sm-4">
+                  {{ unit[2] }}
+                </div>
+              </div>
+              <input type="text" class="form-control" placeholder="{{unit[5]}}" aria-label="Unit Amount"
+                aria-describedby="basic-addon2" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                (keyup)="inputKeyUp(unit[3],$event)">
+                <div class="row justify-content-center">
+                  <button class="btn btn-outline-secondary" (click)="maxUnitsFunction(unit[3])" type="button">Max</button>
+                  <button class="btn btn-outline-secondary" (click)="buildUnits(unit[3],unit[5])"type="button">Build</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

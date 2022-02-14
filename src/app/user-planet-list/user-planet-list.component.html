@@ -1,0 +1,15 @@
+<div class="container-fluid">
+  <div class="row">
+    <div *ngFor="let object of userPlanets">
+      <a [routerLink]="''" (click)="changeTarget(object.solar_system,object.intra_system)">
+        <div class="planet_surroundings">
+          <img src="assets/images/planet_picture.jpg"
+          alt="planet picture"
+          class="planet_picture">
+          <div class="row justify-content-center">
+            <p>{{ object.solar_system }}:{{ object.intra_system}}</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>

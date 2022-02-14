@@ -1,0 +1,56 @@
+.construction_picture{
+  width: 75%;
+  height: 75%;
+  max-width: 250px;
+  max-height: 250px;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.layer{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-width: 1px;
+  border-radius: 3px;
+  box-shadow: 2px 2px 4px #000000;
+  padding: 7px;
+}
+
+.progress-bar-container {
+   background-color: #eee;
+   border-radius: 3px;
+   margin: 3px;
+}
+
+.progress-bar {
+   height: 12px;
+   width: 0;
+   border-radius: 3px;
+}
+
+.amber{
+  background-color: #FFBF00;
+}
+
+.pictured {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #00000075;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.overlay{
+  color: white;
+}
+
+.overlay:hover .pictured {
+  height: 100%;
+}
+.overlay:active .pictured {
+  height: 100%;
+}

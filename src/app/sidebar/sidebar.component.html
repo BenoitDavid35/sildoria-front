@@ -1,0 +1,134 @@
+<div class="d-flex" id="wrapper">
+  <!-- Sidebar -->
+  <div class="bg-light border-right" id="sidebar-wrapper">
+    <div class="sidebar-heading">
+      Sildoria Stories Logo
+    </div>
+    <div class="list-group list-group-flush">
+      <a (click)="changeInnerComponent('planet_view')" class="list-group-item list-group-item-action bg-light">Planet View</a><br>
+      <a (click)="changeInnerComponent('galaxy_view')" class="list-group-item list-group-item-action bg-light">Galaxy</a><br>
+      <a class="list-group-item list-group-item-action bg-light">
+        <div class="dropdown">
+          <button onclick="showBuildingsDropdown()" class="dropbtn list-group-item-action bg-light">Planet Buildings</button>
+          <div id="myBuildingsDropdown" class="dropdown-content">
+            <a (click)="changeInnerComponent('production_view')" class="dropdown-item">Production Buildings</a>
+            <a (click)="changeInnerComponent('industry_view')" class="dropdown-item">Industry Buildings</a>
+          </div>
+        </div>
+      </a>
+      <a class="list-group-item list-group-item-action bg-light">
+        <div class="dropdown">
+          <button onclick="showTechsDropdown()" class="dropbtn  list-group-item-action bg-light">Technologies</button>
+          <div id="myTechsDropdown" class="dropdown-content">
+            <a (click)="changeInnerComponent('economics_view')" class="dropdown-item">Economic Technologies</a>
+            <a (click)="changeInnerComponent('propulsion_view')" class="dropdown-item">Propulsion Technologies</a>
+            <a (click)="changeInnerComponent('player_view')" class="dropdown-item">Macro Technologies</a>
+            <a (click)="changeInnerComponent('weapon_view')" class="dropdown-item">Weapon Technologies</a>
+          </div>
+        </div>
+      </a>
+      <a class="list-group-item list-group-item-action bg-light">
+        <div class="dropdown">
+          <button onclick="showUnitsDropdown()" class="dropbtn  list-group-item-action bg-light">Control center</button>
+          <div id="myUnitsDropdown" class="dropdown-content">
+            <a (click)="changeInnerComponent('fighters')" class="dropdown-item">Fighters</a>
+            <a (click)="changeInnerComponent('turrets')" class="dropdown-item">Turrets</a>
+            <a (click)="changeInnerComponent('civilians')" class="dropdown-item">Civilians</a>
+            <a (click)="changeInnerComponent('logistic')" class="dropdown-item">Logistic</a>
+          </div>
+        </div>
+      </a>
+      <a (click)="changeInnerComponent('shipyard')" class="list-group-item list-group-item-action bg-light">Shipyard</a><br>
+      <a (click)="changeInnerComponent('fleet_view')" class="list-group-item list-group-item-action bg-light">Fleets</a><br>
+    </div>
+  </div>
+  <!-- /#sidebar-wrapper -->
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+      <button class="btn btn-primary d-sm-none" id="menu-toggle">Hide Bar</button>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <img src="../../assets/images/metal.jpg" alt="metal ressource" class="ressource_logo">
+            <p>{{ ressourcesService.ressources.metal }}</p>
+          </li>
+          <li class="nav-item">
+            <img src="../../assets/images/metal.jpg" alt="crystal ressource" class="ressource_logo">
+            <p>{{ ressourcesService.ressources.crystal }}</p>
+          </li>
+          <li class="nav-item">
+            <img src="../../assets/images/metal.jpg" alt="gas ressource" class="ressource_logo">
+            <p>{{ ressourcesService.ressources.gas }}</p>
+          </li>
+          <li class="nav-item">
+            <img src="../../assets/images/metal.jpg" alt="gas ressource" class="ressource_logo">
+            <p>{{ ressourcesService.ressources.energy }}</p>
+          </li>
+          <li class="nav-item">
+            <img src="../../assets/images/metal.jpg" alt="benalite ressource" class="ressource_logo">
+            <p>{{ ressourcesService.ressources.benalite }}</p>
+          </li>
+          <app-account-widget></app-account-widget>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div *ngIf="planet_view">
+        <app-planet-view></app-planet-view>
+      </div>
+      <div *ngIf="galaxy_view">
+        <app-map-list></app-map-list>
+      </div>
+      <div *ngIf="production_view">
+        <app-buildings></app-buildings>
+      </div>
+      <div *ngIf="industry_view">
+        <app-buildings></app-buildings>
+      </div>
+      <div *ngIf="account_component">
+        <app-account></app-account>
+      </div>
+      <div *ngIf="economics_view">
+        <app-technologies></app-technologies>
+      </div>
+      <div *ngIf="weapon_view">
+        <app-technologies></app-technologies>
+      </div>
+      <div *ngIf="propulsion_view">
+        <app-technologies></app-technologies>
+      </div>
+      <div *ngIf="player_view">
+        <app-technologies></app-technologies>
+      </div>
+      <div *ngIf="fighters">
+        <app-control-center></app-control-center>
+      </div>
+      <div *ngIf="turrets">
+        <app-control-center></app-control-center>
+      </div>
+      <div *ngIf="civilians">
+        <app-control-center></app-control-center>
+      </div>
+      <div *ngIf="logistic">
+        <app-control-center></app-control-center>
+      </div>
+      <div *ngIf="shipyard">
+        <app-shipyard></app-shipyard>
+      </div>
+      <div *ngIf="fleet_view">
+        <app-fleet></app-fleet>
+      </div>
+    </div>
+  </div>
+  <!-- /#page-content-wrapper -->
+</div>
+<!-- /#wrapper -->
+<div class="container">
+  <div class="row">
+    <app-user-planet-list></app-user-planet-list>
+  </div>
+</div>

@@ -1,0 +1,81 @@
+<div>
+  <div>
+    <button type="button" class="btn btn-primary" (click)="connectApi(coordinates_input -1)">-</button>
+     <input type="text" id="coordinates_input" value='{{coordinates_input}}' (keyup)="onKey($event)">
+    <button type="button" class="btn btn-primary" (click)="connectApi(coordinates_input +1)">+</button>
+    <button type="button" class="btn btn-primary" (click)="connectManual()">Search</button>
+  </div>
+  <div *ngFor="let object of arrObjectList">
+    <div class="row cases">
+      <div class="col-sm-1"><img src="assets/images/logo_planet.png" class="img-fluid planet_type"></div>
+      <div class="col-sm-3">{{object.object_form}}</div>
+      <div class="col-sm-3">{{object.solar_system}}:{{object.intra_system}}</div>
+    </div>
+  </div>
+  <!-- <div *ngFor="let object of arrObjectList">
+    <div class="row cases">
+      <div class="col-sm-3">{{object}}</div>
+    </div>
+  </div>
+  <!-- <div class="row cases">
+    <div class="col-sm-3">{{arrObjectList.object1}}</div>
+  </div>
+  <div class="row cases">
+    <div class="col-sm-3">{{arrObjectList.object2}}</div>
+  </div>
+  <div class="row cases">
+    <div class="col-sm-3">{{arrObjectList.object3}}</div>
+  </div>
+  <div class="row cases">
+    <div class="col-sm-3">{{arrObjectList.object4}}</div>
+  </div>
+  <div class="row cases">
+    <div class="col-sm-3">{{arrObjectList.object5}}</div>
+  </div>
+  <div class="row cases">
+    <div class="col-sm-3">{{arrObjectList.object6}}</div>
+  </div>
+  <div class="row cases">
+    <div class="col-sm-3">{{arrObjectList.object7}}</div>
+  </div>
+  <div class="row cases">
+    <div class="col-sm-3">{{arrObjectList.object8}}</div>
+  </div>
+  <div class="row cases">
+    <div class="col-sm-3">{{arrObjectList.object9}}</div>
+  </div>
+  <div class="row cases">
+    <div class="col-sm-3">{{arrObjectList.object10}}</div>
+  </div>
+  <div class="row cases">
+    <div class="col-sm-3">{{arrObjectList.object11}}</div>
+  </div>
+  <div class="row cases">
+    <div class="col-sm-3">{{arrObjectList.object12}}</div>
+  </div>
+  <div class="row cases">
+    <div class="col-sm-3">{{arrObjectList.object13}}</div>
+  </div>
+  <div class="row cases">
+    <div class="col-sm-3">{{arrObjectList.object14}}</div>
+  </div>
+  <div class="row cases">
+    <div class="col-sm-3">{{arrObjectList.object15}}</div>
+  </div>
+  <div class="row cases">
+    <div class="col-sm-3">{{arrObjectList.object16}}</div>
+  </div>
+  <div class="row cases">
+    <div class="col-sm-3">{{arrObjectList.object17}}</div>
+  </div>
+  <div class="row cases">
+    <div class="col-sm-3">{{arrObjectList.object18}}</div>
+  </div>
+  <div class="row cases">
+    <div class="col-sm-3">{{arrObjectList.object19}}</div>
+  </div>
+  <div class="row cases">
+    <div class="col-sm-3">{{arrObjectList.object20}}</div>
+  </div> -->
+</div>
+<!-- </div> -->

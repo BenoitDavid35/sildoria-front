@@ -1,0 +1,65 @@
+<div *ngFor="let ship of fleetContent[7]">
+    {{ this.valueFormatter.formatBackIdToTitleValue(ship[0]) }} Qty: {{ship[1]}}
+    <ngx-slider [(value)]="ship[1]" [options]="ship[2]"></ngx-slider>
+</div>
+
+<div class="row justify-content-center">
+  <label>Coordonnées</label>
+  <div class="col-sm-2">
+    <input type="texte"
+    [(ngModel)]=fleetContent[4]
+    name="solar_system"
+    id="solar_system"
+    class="form-control"
+    (blur)="checkAvailableMissions()">
+  </div>
+  :
+  <div class="col-sm-2">
+    <input type="texte"
+    [(ngModel)]=fleetContent[5]
+    name="intra_planet"
+    id="intra_planet"
+    class="form-control"
+    (blur)="checkAvailableMissions()">
+  </div>
+</div>
+
+<div class="row">
+  <h3>Missions</h3>
+</div>
+<div class="row">
+  <div id="mining" (click)="missionSelector($event,'mining')" *ngIf="availableMissions.mining">Mining</div>
+  <div id="attack" (click)="missionSelector($event,'attack')" *ngIf="availableMissions.attack">attack</div>
+  <div id="transport" (click)="missionSelector($event,'transport')" *ngIf="availableMissions.transport">transport</div>
+  <div id="espionnage" (click)="missionSelector($event,'espionnage')" *ngIf="availableMissions.espionnage">espionnage</div>
+  <div id="occupation" (click)="missionSelector($event,'occupation')" *ngIf="availableMissions.occupation">occupation</div>
+  <div id="deplacement" (click)="missionSelector($event,'deplacement')" *ngIf="availableMissions.deplacement">déplacement</div>
+  <div id="recycling" (click)="missionSelector($event,'recycling')" *ngIf="availableMissions.recycling">recycling</div>
+  <div id="exploration" (click)="missionSelector($event,'exploration')" *ngIf="availableMissions.exploration">exploration</div>
+</div>
+<div class="row">
+  <div *ngIf="">
+    mining works
+  </div>
+  <div *ngIf="">
+    attack works
+  </div>
+  <div *ngIf="">
+    transport works
+  </div>
+  <div *ngIf="">
+    espionnage works
+  </div>
+  <div *ngIf="">
+    occupation works
+  </div>
+  <div *ngIf="">
+    déplacement works
+  </div>
+  <div *ngIf="">
+    recycling works
+  </div>
+  <div *ngIf="">
+    exploration works
+  </div>
+</div>

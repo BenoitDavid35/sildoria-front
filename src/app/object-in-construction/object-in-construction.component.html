@@ -1,0 +1,65 @@
+<div *ngIf="lineDisplay">
+  <div class="container" *ngIf="userObject">
+    <div class="layer">
+      <div class="row text-center">
+        <div class="col-sm-2 my-auto">
+          <img src="../../assets/images/metal_mine.jpg" alt="buinding in construction" class="construction_picture" />
+        </div>
+        <div class="col-sm-6">
+          <div class="row text-center">
+            <div class="col-sm-10 my-auto">
+              <div class="progress-bar-container">
+                <div class="progress-bar amber" [ngStyle]="{'width': progress + '%'}"></div>
+              </div>
+            </div>
+            <div class="col-sm-2 my-auto">
+              <div>{{progress}}%</div>
+            </div>
+          </div>
+          <p>Time left before completion: {{timeLeftFormatted}}</p>
+          <p *ngIf="!unit_building">level: {{this.userObject.level}}</p>
+          <p *ngIf="unit_building">Quantity: {{this.userObject.count}}</p>
+        </div>
+        <div class="col-sm-3 my-auto">
+          <button type="button" (click)="cancelObject()" class="btn btn-danger">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="squareDisplay">
+  <div class="container" *ngIf="userObject">
+    <div class="overlay text-center">
+      <div class="picture">
+        <img src="assets/images/metal_mine.jpg" alt="Production Building" class="img-fluid construction_picture" />
+      </div>
+      <div class="container pictured">
+        <div class="row text-center">
+          <div class="col-xl-9 my-auto">
+            <div class="progress-bar-container">
+              <div class="progress-bar amber" [ngStyle]="{'width': progress + '%'}"></div>
+            </div>
+          </div>
+          <div class="col-xl-2 my-auto">
+            <div>{{progress}}%</div>
+          </div>
+        </div>
+        <div class="container text-center">
+          <div class="row">
+            Completion in: {{timeLeftFormatted}}
+          </div>
+          <div class="row">
+            level: {{this.userObject.level}}
+          </div>
+          <div class="row my-auto">
+            <button type="button" (click)="cancelObject()" class="btn btn-danger">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container" *ngIf="!userObject">
+    <p class="text-align">No {{objectToDisplay}} in construction</p>
+  </div>
+</div>

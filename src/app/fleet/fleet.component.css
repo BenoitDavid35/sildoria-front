@@ -1,0 +1,11 @@
+.shipLogo{
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.bordered{
+  border: 1px solid lightgrey;
+  padding: 3px;
+  border-radius: 3px;
+  margin-bottom: 5px;
+}

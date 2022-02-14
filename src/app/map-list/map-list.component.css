@@ -1,0 +1,11 @@
+.cases{
+  margin: 5px;
+  border-radius: 5px;
+  border-width: 1px;
+  box-shadow: 1px 1px 1px #aaa;
+  background-color: lightgrey;
+}
+
+.planet_type{
+  padding: 3px;
+}

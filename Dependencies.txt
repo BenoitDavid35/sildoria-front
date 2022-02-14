@@ -1,0 +1,8 @@
+Drpendencies
+ngx-cookie-service
+jquery
+crypto-js
+@angular-slider/ngx-slider 
+bootstrap
+
+npm install --save ngx-cookie-service jquery crypto-js @angular-slider/ngx-slider bootstrap

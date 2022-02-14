@@ -1,0 +1,91 @@
+<div class="row">
+  <div *ngIf="productionBuildings" class="col-sm-12">
+    <img src="assets/images/rsz_1building_position.jpg" alt="Sila Jumbotron" class="img-fluid"/>
+  </div>
+  <div *ngIf="industrialBuildings" class="col-sm-12">
+    <img src="assets/images/industrial_building.jpg" alt="Sila Jumbotron" class="img-fluid"/>
+  </div>
+</div>
+<app-object-in-construction [someInput]="inputValue" [objectToDisplay]="objectToDisplay"></app-object-in-construction>
+<div class="container">
+  <div *ngIf="productionBuildings" class="row">
+    <div *ngFor="let building of userBuildings" class="col-sm-3 text-center bordered">
+      <div class="my-2">
+        <div class="overlay">
+          <!-- <div class="picture"> -->
+          <img src="assets/images/{{ userBuildings[0][3] }}.jpg" alt="Production Building" class="img-fluid" />
+          <!-- </div> -->
+          <div class="pictured">
+            <div class="popup_content">
+              <p>{{ this.valueFormatter.formatBackIdToTitleValue(building[3]) }} level {{ building[4] }}</p>
+              <div class="row">
+                <div class="col-sm-4">
+                  <img src="assets/images/metal.jpg" alt="Metal Ressource" class="img-fluid ressource" />
+                </div>
+                <div class="col-sm-4">
+                  <img src="assets/images/metal.jpg" alt="Crystal Ressource" class="img-fluid ressource" />
+                </div>
+                <div class="col-sm-4">
+                  <img src="assets/images/metal.jpg" alt="Gas Ressource" class="img-fluid ressource" />
+                </div>
+              </div>
+              <div class="row textColorWhite">
+                <div class="col-sm-4">
+                  {{ building[0] }}
+                </div>
+                <div class="col-sm-4">
+                  {{ building[1] }}
+                </div>
+                <div class="col-sm-4">
+                  {{ building[2] }}
+                </div>
+              </div>
+              <button type="button" (click)="updateBuilding(building[3],0)" class="btn btn-danger mr-1">Downgrade</button>
+              <button type="button" (click)="updateBuilding(building[3],1)" class="btn btn-success ml-1">Upgrade</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="industrialBuildings" class="row">
+    <div *ngFor="let building of userBuildings" class="col-sm-3 text-center bordered">
+      <div class="my-2">
+        <div class="overlay">
+          <!-- <div class="picture"> -->
+            <img src="assets/images/metal_mine.jpg" alt="Production Building" class="img-fluid" />
+          <!-- </div> -->
+          <div class="pictured">
+            <div class="popup_content">
+              <p>{{ this.valueFormatter.formatBackIdToTitleValue(building[3]) }} level {{ building[4] }}</p>
+              <div class="row">
+                <div class="col-sm-4">
+                  <img src="assets/images/metal.jpg" alt="Metal Ressource" class="img-fluid ressource" />
+                </div>
+                <div class="col-sm-4">
+                  <img src="assets/images/metal.jpg" alt="Crystal Ressource" class="img-fluid ressource" />
+                </div>
+                <div class="col-sm-4">
+                  <img src="assets/images/metal.jpg" alt="Gas Ressource" class="img-fluid ressource" />
+                </div>
+              </div>
+              <div class="row textColorWhite">
+                <div class="col-sm-4">
+                  {{ building[0] }}
+                </div>
+                <div class="col-sm-4">
+                  {{ building[1] }}
+                </div>
+                <div class="col-sm-4">
+                  {{ building[2] }}
+                </div>
+              </div>
+              <button type="button" (click)="updateBuilding(building[3],0)" class="btn btn-danger mr-1">Downgrade</button>
+              <button type="button" (click)="updateBuilding(building[3],1)" class="btn btn-success ml-1">Upgrade</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

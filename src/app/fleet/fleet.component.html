@@ -1,0 +1,25 @@
+<div *ngIf="!fleetWidget">
+  <div *ngIf="!createNewFleetWidget">
+    <div class="row justify-content-center">
+      <div *ngIf="!noFleets">
+        <div class="row">
+          <h2>On service fleets:</h2>
+        </div>
+        <div *ngFor="let fleet of fleets">
+          <div class="row bordered" (click)="fleetWidgetFunction(fleet)">
+            Fleet {{fleet[1]}} : With {{fleet[7]}} ships : Coordinates {{fleet[3]}}:{{fleet[4]}} <label *ngIf="!noMission">: {{fleet[2]}} to {{fleet[5]}}:{{fleet[6]}}</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <button (click)="createNewFleet()">Create Fleet</button>
+    </div>
+  </div>
+</div>
+<div *ngIf="createNewFleetWidget">
+  <app-create-new-fleet (returnToMother)='createNewFleet()'></app-create-new-fleet>
+</div>
+<div *ngIf="fleetWidget">
+  <app-fleet-action [fleet]="fleetWidget"></app-fleet-action>
+</div>

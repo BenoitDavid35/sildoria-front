@@ -1,0 +1,92 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <a class="navbar-brand" [routerLink]="''">
+      <img src="/assets/images/logo.png" alt="logo Sildoria Stories" class="create-account-logo">
+    </a>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-8 create-account-card">
+        <form #myform="ngForm" (ngSubmit)="onSubmit(myform)" class="form-group">
+          <div class="row">
+            <label>Identifiant Sila</label>
+          </div>
+          <div class="row">
+            <input type="texte"
+              ngModel
+              name="userSILA_ID"
+              id="userSILA_ID"
+              class="form-control">
+          </div>
+          <div *ngIf="userNameError">
+            <label>Merci de renseigner identifiant Sila</label>
+          </div>
+          <div class="row">
+            <label>E-Mail</label>
+          </div>
+          <div class="row">
+            <input type="texte"
+              ngModel
+              name="userEmail"
+              id="userEmail"
+              class="form-control">
+          </div>
+          <div *ngIf="userEmailError">
+            <label>Merci de renseigner votre adresse mail</label>
+          </div>
+          <div class="row">
+            <label>Mot de passe Sila</label>
+          </div>
+          <div class="row">
+            <input type="password"
+              ngModel
+              name="userPassword"
+              id="userPassword"
+              class="form-control">
+          </div>
+          <div *ngIf="userPasswordError">
+            <label>Merci de renseigner un mot de passe Sila</label>
+          </div>
+          <div class="row">
+            <label>Réinsérez votre mot de passe Sila</label>
+          </div>
+          <div class="row">
+            <input type="password"
+              ngModel
+              name="userPasswordConfirm"
+              id="userPasswordConfirm"
+              class="form-control">
+          </div>
+          <div *ngIf="userPasswordConfirmError">
+            <label>Merci de rentrer une seconde fois votre mot de passe Sila</label>
+          </div>
+          <div *ngIf="passwordMissMatch">
+            <label>Vos mots de passe ne correspondent pas</label>
+          </div>
+          <div class="row">
+            <label>Insérez une image de profil</label>
+          </div>
+          <div class="row">
+            <div class="form-group">
+                <input type="file"
+                  ngModel
+                  name="image"
+                  class="form-control"
+                  (change)="fileInput($event)"/>
+            </div>
+          </div>
+          <div *ngIf="userImageError">
+            <label>Merci de renseigner votre image de profil.</label>
+          </div>
+          <div *ngIf="display">
+            {{display}}
+          </div>
+          <div class="row">
+            <input type="submit" class="btn btn-primary" value="Créer mon compte" >
+          </div>
+          <div class="row">
+            <p>En créant votre compte, vous acceptez les conditions d'utilisation de Sila.</p>
+          </div>
+        </form>
+    </div>
+  </div>
+</div>

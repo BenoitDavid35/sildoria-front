@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="row">
+    <img src="assets/images/planet_picture.jpg" alt="home planet" class="img-fluid">
+    <div class="topleft">
+      <!--User Name-->{{ userName }} <!-- - Planet Name-->
+    </div>
+    <div class="bottomleft">
+      <div class="col-sm-6 text-center objectDisplayComponent">
+        Fleets in orbit
+      </div>
+    </div>
+    <div class="bottomright">
+      <div class="row">
+        <div class="col-sm-6 text-left">
+          Mass: {{ mass }}
+        </div>
+        <div class="col-sm-6 text-right">
+          X fleet slots available
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 text-left">
+          Temp: {{ temperature }} °C
+        </div>
+        <div class="col-sm-6 text-right">
+          {{ system }}:{{ intraPosition }}
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-sm-6 text-left">
+          XXXX military
+        </div>
+        <div class="col-sm-6 text-right">
+          XXXX non military
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 text-left">
+          XXXX defense
+        </div>
+        <div class="col-sm-6 text-right">
+          XXXX Missiles
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4 text-center objectDisplayComponent">
+      <app-object-in-construction [objectToDisplay]="building" [squareOrLineDisplay]="square"></app-object-in-construction>
+    </div>
+    <div class="col-sm-4 text-center objectDisplayComponent">
+      <app-object-in-construction [objectToDisplay]="technology" [squareOrLineDisplay]="square"></app-object-in-construction>
+    </div>
+    <div class="col-sm-4 text-center objectDisplayComponent">
+      <!-- <app-object-in-construction [objectToDisplay]="ship_building" [squareOrLineDisplay]="square"></app-object-in-construction> -->
+    </div>
+  </div>
+</div>

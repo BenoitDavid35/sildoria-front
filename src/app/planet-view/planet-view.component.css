@@ -1,0 +1,61 @@
+/*
+#000000 is black
+#ff0000 is red
+*/
+
+.container {
+  position: relative;
+}
+
+.topleft {
+  position: absolute;
+  top: 15px;
+  left: 25px;
+  font-size: 18px;
+  background-color: #ff000075;
+  color: #FFFFFF;
+  margin: 10px;
+  border-radius: 3px;
+  padding: 3px;
+  padding-top: 1px;
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 15px;
+  left: 25px;
+  font-size: 13px;
+  background-color: #ff000075;
+  color: #FFFFFF;
+  margin: 10px;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.bottomright {
+  position: absolute;
+  bottom: 15px;
+  right: 25px;
+  font-size: 13px;
+  background-color: #ff000075;
+  color: #FFFFFF;
+  margin: 10px;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+hr{
+  border-top: 2px solid white;
+  width: 75%;
+  border-radius: 5px;
+}
+
+.objectDisplayComponent{
+  /* padding: 3px; */
+  margin: 3px;
+}

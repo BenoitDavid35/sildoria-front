@@ -1,0 +1,26 @@
+<div class="justify-content-center">
+  <p>FleetName</p>
+  <input type="text" [(ngModel)]="fleetName" />
+  <div *ngFor="let unit of userUnits">
+    <div class="row justify-content-center">
+      <div>
+        <img class="shipLogo" src="assets/images/metal_mine.jpg" alt="Card image">
+      </div>
+      <div class="col-sm-3">
+        <h6>{{ this.valueFormatter.formatBackIdToTitleValue(unit[0]) }}</h6>
+      </div>
+      <div class="col-sm-3">
+        <ngx-slider [(value)]="unit[3]" [options]="unit[4]"></ngx-slider>
+      </div>
+    </div>
+  </div>
+
+  <p>Selected Ships</p>
+  <div *ngFor="let unit of userUnits">
+    <div *ngIf="unit[3]">
+      {{ this.valueFormatter.formatBackIdToTitleValue(unit[0]) }}: {{unit[3]}}
+    </div>
+  </div>
+  <hr>
+  <button (click)="createFleet()">Create Fleet</button><button (click)="returnToMotherFunction()">Cancel</button>
+</div>
