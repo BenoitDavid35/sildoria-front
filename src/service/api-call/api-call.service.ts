@@ -11,7 +11,7 @@ export class ApiCallService {
 
   constructor(private httpService: HttpClient) { }
 
-callServer(url,valueArray){
+callServer(url: any,valueArray: any){
   // console.log(this.baseUrl + url + valueArray);
   return this.httpService.post(this.baseUrl + url, valueArray);
 }

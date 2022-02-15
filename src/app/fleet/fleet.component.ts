@@ -57,7 +57,7 @@ export class FleetComponent implements OnInit {
     }
   }
 
-  fleetWidgetFunction(fleet){
+  fleetWidgetFunction(fleet: any){
     if(this.fleetWidget === ''){
       this.fleetWidget = fleet;
     }else{

@@ -10,7 +10,7 @@ export class EncrDecrService {
   constructor() { }
 
   //The set method is use for encrypt the value.
-  set(value){
+  set(value: any){
     var keys = '123456789$#@$^@1ERFabcdef';
     var key = CryptoJS.enc.Utf8.parse(keys);
     var iv = CryptoJS.enc.Utf8.parse(keys);

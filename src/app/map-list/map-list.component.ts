@@ -19,7 +19,7 @@ export class MapListComponent implements OnInit {
     this.coordinates_input = 1;
   }
 
-  connectApi(location){
+  connectApi(location: any){
     this.coordinates_input = location;
     var valueArray = [location];
     this.apiService.callServer(this.url,valueArray)

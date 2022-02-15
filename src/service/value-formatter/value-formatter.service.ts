@@ -7,273 +7,276 @@ export class ValueFormatterService {
 
   constructor() { }
 
-  formatBackIdToTitleValue(item){
+  formatBackIdToTitleValue(item: any){
     switch(item) {
       case 'metal_mine':
-      return 'Metal mine';
+        return 'Metal mine';
       break;
       case 'crystal_mine':
-      return 'Crystal mine';
+        return 'Crystal mine';
       break;
       case 'gas_mine':
-      return 'Gas mine';
+        return 'Gas mine';
       break;
       case 'solar_mine':
-      return 'Solar plant';
+        return 'Solar plant';
       break;
       case 'fusion_reactor':
-      return 'Fusion reactor';
+        return 'Fusion reactor';
       break;
       case 'metal_warehouse':
-      return 'Metal warehouse';
+        return 'Metal warehouse';
       break;
       case 'crystal_warehouse':
-      return 'Crystal Warehouse';
+        return 'Crystal Warehouse';
       break;
       case 'gas_warehouse':
-      return 'Gas warehouse';
+        return 'Gas warehouse';
       break;
       case 'waste_factory':
-      return 'Waste Factory';
+        return 'Waste Factory';
       break;
       case 'planet_engineering_complex':
-      return 'Engineering complex';
+        return 'Engineering complex';
       break;
       case 'robotic_center':
-      return 'Robotic center';
+        return 'Robotic center';
       break;
       case 'spaceport':
-      return 'Spaceport';
+        return 'Spaceport';
       break;
       case 'laboratory':
-      return 'Laboratory';
+        return 'Laboratory';
       break;
       case 'experimental_research_center':
-      return 'Experimentation center';
+        return 'Experimentation center';
       break;
       case 'rare_ressource_research_center':
-      return 'Rare ressource research center';
+        return 'Rare ressource research center';
       break;
       case 'military_factory':
-      return 'Military factory';
+        return 'Military factory';
       break;
       case 'supercalculator':
-      return 'Supercalculator';
+        return 'Supercalculator';
       break;
       case 'alliance_center':
-      return 'Alliance center';
+        return 'Alliance center';
       break;
       case 'design_center':
-      return 'Design center';
+        return 'Design center';
       break;
       case 'missile_silo':
-      return 'Missile silo';
+        return 'Missile silo';
       break;
       case 'metal':
-      return 'Metal';
+        return 'Metal';
       break;
       case 'crystal':
-      return 'Crystal';
+        return 'Crystal';
       break;
       case 'gas':
-      return 'Gas';
+        return 'Gas';
       break;
       case 'extraction':
-      return 'Extraction';
+        return 'Extraction';
       break;
       case 'energy':
-      return 'Energy';
+        return 'Energy';
       break;
       case 'fusion':
-      return 'Fusion';
+        return 'Fusion';
       break;
       case 'chemical_engine':
-      return 'Chemical engine';
+        return 'Chemical engine';
       break;
       case 'ion_engine':
-      return 'Ion engine';
+        return 'Ion engine';
       break;
       case 'microwarp_drive':
-      return 'Microwarp Drive';
+        return 'Microwarp Drive';
       break;
       case 'quantum_drive':
-      return 'Quantum drive';
+        return 'Quantum drive';
       break;
       case 'benalite_engine':
-      return 'Benalite engine';
+        return 'Benalite engine';
       break;
       case 'astrophysics':
-      return 'Astrophysics';
+        return 'Astrophysics';
       break;
       case 'intergalactic_research_network':
-      return 'Intergalactic Research network';
+        return 'Intergalactic Research network';
       break;
       case 'ballistic':
-      return 'Ballistic';
+        return 'Ballistic';
       break;
       case 'computer':
-      return 'Computer';
+        return 'Computer';
       break;
       case 'design':
-      return 'Design';
+        return 'Design';
       break;
       case 'spy':
-      return 'Spy';
+        return 'Spy';
       break;
       case 'weapon':
-      return 'Weapon';
+        return 'Weapon';
       break;
       case 'laser':
-      return 'Laser';
+        return 'Laser';
       break;
       case 'photon':
-      return 'Photon';
+        return 'Photon';
       break;
       case 'ion':
-      return 'Ion';
+        return 'Ion';
       break;
       case 'plasma':
-      return 'Plasma';
+        return 'Plasma';
       break;
       case 'neutron':
-      return 'Neutron';
+        return 'Neutron';
       break;
       case 'electromagnetic':
-      return 'Electromagnetic';
+        return 'Electromagnetic';
       break;
       case 'antimatter':
-      return 'Antimatter';
+        return 'Antimatter';
       break;
       case 'armor':
-      return 'Armor';
+        return 'Armor';
       break;
       case 'shield':
-      return 'Shield';
+        return 'Shield';
       break;
       case 'laser_turret':
-      return 'Lazer';
+        return 'Lazer';
       break;
       case 'photon_turret':
-      return 'Photon';
+        return 'Photon';
       break;
       case 'ion_turret':
-      return 'Ion';
+        return 'Ion';
       break;
       case 'plasma_turret':
-      return 'Plasma';
+        return 'Plasma';
       break;
       case 'gauss_turret':
-      return 'Gauss';
+        return 'Gauss';
       break;
       case 'neutron_turret':
-      return 'Neutron';
+        return 'Neutron';
       break;
       case 'antimatter_turret':
-      return 'Antimater';
+        return 'Antimater';
       break;
       case 'small_shield':
-      return 'Small shield';
+        return 'Small shield';
       break;
       case 'big_shield':
-      return 'Heavy shield';
+        return 'Heavy shield';
       break;
       case 'ballistic_missile':
-      return 'Ballistic Missile';
+        return 'Ballistic Missile';
       break;
       case 'spatial_mine':
-      return 'Spatial mine';
+        return 'Spatial mine';
       break;
       case 'defensive_satellite':
-      return 'Defensive Satellite';
+        return 'Defensive Satellite';
       break;
       case 'heavy_defensive_satellite':
-      return 'Heavy Defensive Satellite';
+        return 'Heavy Defensive Satellite';
       break;
       case 'fighter':
-      return 'Fighter';
+        return 'Fighter';
       break;
       case 'improved_fighter':
-      return 'Improved fighter';
+        return 'Improved fighter';
       break;
       case 'light_cruiser':
-      return 'Light Cruiser';
+        return 'Light Cruiser';
       break;
       case 'bomb_cruiser':
-      return 'Bomb Cruiser';
+        return 'Bomb Cruiser';
       break;
       case 'line_cruiser':
-      return 'Line Cruiser';
+        return 'Line Cruiser';
       break;
       case 'battleship':
-      return 'Battleship';
+        return 'Battleship';
       break;
       case 'line_battleship':
-      return 'Line battleship';
+        return 'Line battleship';
       break;
       case 'fleet_destructor':
-      return 'Fleet Destuctor';
+        return 'Fleet Destuctor';
       break;
       case 'titan_destructor':
-      return 'Titan Destuctor';
+        return 'Titan Destuctor';
       break;
       case 'titan_1':
-      return 'Titan 1';
+        return 'Titan 1';
       break;
       case 'titan_2':
-      return 'Titan 2';
+        return 'Titan 2';
       break;
       case 'titan_3':
-      return 'Titan 3';
+        return 'Titan 3';
       break;
       case 'titan_4':
-      return 'Ragnarok';
+        return 'Ragnarok';
       break;
       case 'spy_probe':
-      return 'Spy Probe';
+        return 'Spy Probe';
       break;
       case 'small_transporter':
-      return 'Small Transporter';
+        return 'Small Transporter';
       break;
       case 'big_transporter':
-      return 'Big Transporter';
+        return 'Big Transporter';
       break;
       case 'planet_extractor':
-      return 'Planet Extractor';
+        return 'Planet Extractor';
       break;
       case 'nebulae_extractor':
-      return 'Nebulae Extractor';
+        return 'Nebulae Extractor';
       break;
       case 'black_hole_extractor':
-      return 'Black Hole Extractor';
+        return 'Black Hole Extractor';
       break;
       case 'asteroid_field_extractor':
-      return 'Asteroid Field Extractor';
+        return 'Asteroid Field Extractor';
       break;
       case 'colonization_ship':
-      return 'Colonization Ship';
+        return 'Colonization Ship';
       break;
       case 'recycling_ship':
-      return 'Recycling Ship';
+        return 'Recycling Ship';
       break;
       case 'solar_satellite':
-      return 'Solar Satellite';
+        return 'Solar Satellite';
       break;
       case 'hunter_carrier':
-      return 'Hunter Carrier';
+        return 'Hunter Carrier';
       break;
       case 'shield_destructor':
-      return 'Shield Destructor';
+        return 'Shield Destructor';
       break;
       case 'boarding_vessel':
-      return 'Boarding Vessel';
+        return 'Boarding Vessel';
       break;
       case 'interplanetary_missile':
-      return 'Interplanetary Missile';
+        return 'Interplanetary Missile';
+      break;
+      default:
+        return '';
       break;
     }
-  }
+  };
 
-  getDateFormattedFromTimestamp(timestamp){
+  getDateFormattedFromTimestamp(timestamp: any){
     var year = this.getNumberOfFullYear(timestamp);
     var month = this.getNumberOfMonth(timestamp);
     var day = this.getNumberOfDay(timestamp);
@@ -310,11 +313,11 @@ export class ValueFormatterService {
     return outputValue;
   }
 
-  getNumberOfFullYear(timestamp){
+  getNumberOfFullYear(timestamp: any){
     return Math.floor(timestamp/31104000).toString();
   }
 
-  getNumberOfMonth(timestamp){
+  getNumberOfMonth(timestamp: any){
     var indexInYear = timestamp/31104000;
     if(indexInYear != Math.floor(indexInYear)){
       var indexInMonth = indexInYear.toString();
@@ -328,7 +331,7 @@ export class ValueFormatterService {
     }
   }
 
-  getNumberOfDay(timestamp){
+  getNumberOfDay(timestamp: any){
     var indexInMonth = timestamp/2592000;
     if(indexInMonth != Math.floor(indexInMonth)){
       var indexInDay = indexInMonth.toString();
@@ -342,7 +345,7 @@ export class ValueFormatterService {
     }
   }
 
-  getNumberOfHours(timestamp){
+  getNumberOfHours(timestamp: any){
     var indexInDay = timestamp/86400;
     if(indexInDay != Math.floor(indexInDay)){
       var indexInHour = indexInDay.toString();
@@ -356,7 +359,7 @@ export class ValueFormatterService {
     }
   }
 
-  getNumberOfMinutes(timestamp){
+  getNumberOfMinutes(timestamp: any){
     var indexInHour = timestamp/3600;
     if(indexInHour != Math.floor(indexInHour)){
       var indexInMinutes = indexInHour.toString();
@@ -370,7 +373,7 @@ export class ValueFormatterService {
     }
   }
 
-  getNumberOfSeconds(timestamp){
+  getNumberOfSeconds(timestamp: any){
     var indexInMinutes = timestamp/60;
     if(indexInMinutes != Math.floor(indexInMinutes)){
       var indexInSeconds = indexInMinutes.toString();

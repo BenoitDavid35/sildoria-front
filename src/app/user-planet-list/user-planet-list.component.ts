@@ -19,7 +19,7 @@ export class UserPlanetListComponent implements OnInit {
     this.loadUserPlanets(this.Connexion.getClientID());
   }
 
-  loadUserPlanets(userID){
+  loadUserPlanets(userID: any){
     var valueArray = [
       userID
     ];
@@ -34,7 +34,7 @@ export class UserPlanetListComponent implements OnInit {
       });
   }
 
-  changeTarget(system,position){
+  changeTarget(system: any,position: any){
       this.Connexion.setSystem(system);
       this.Connexion.setIntraPosition(position);
   }

@@ -40,7 +40,7 @@ export class UploadService {
     return fileName + '.' + fileExtention[1];
   }
 
-  public randomName(length) {
+  public randomName(length: any) {
     //https://stackoverflow.com/questions/1349404/generate-random-string-characters-in-javascript
    var result           = '';
    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';

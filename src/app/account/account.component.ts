@@ -13,11 +13,11 @@ import { UploadService } from '../../service/upload/upload.service'
 export class AccountComponent implements OnInit {
 
   constructor(private Connexion: ConnexionService,private EncrDecr: EncrDecrService, private apiService: ApiCallService,private router: Router, private upload: UploadService) {}
-  Sila_ID: string;
-  ClientID: string;
-  Mail: string;
-  Avatar: string;
-  Password: string;
+  Sila_ID: string = '';
+  ClientID: string = '';
+  Mail: string = '';
+  Avatar: string = '';
+  Password: string = '';
   fileData: File;
   url: string = 'new-profile-pic/'
   imageChange: any = '';
@@ -26,9 +26,9 @@ export class AccountComponent implements OnInit {
   fileError: any = '';
   fileSuccess: string = '';
 
-  pwdOld: String;
-  pwdChange: String;
-  pwdConfirm: String;
+  pwdOld: String = '';
+  pwdChange: String = '';
+  pwdConfirm: String = '';
 
   localReturn: String = '';
 

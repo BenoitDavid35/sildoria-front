@@ -67,10 +67,11 @@ export class ObjectInConstructionComponent implements OnInit {
 
   cancelObject(){
     var url = "cancelObjectConstruction/";
+    var valueArray: any;
 
     switch (this.objectToDisplay){
       case 'building':
-      var valueArray = [
+      valueArray = [
         this.Connexion.getClientID(),
         this.Connexion.getSystem(),
         this.Connexion.getIntraPosition(),
@@ -79,7 +80,7 @@ export class ObjectInConstructionComponent implements OnInit {
       ];
       break
       case 'technology':
-      var valueArray = [
+      valueArray = [
         this.Connexion.getClientID(),
         this.Connexion.getSystem(),
         this.Connexion.getIntraPosition(),
@@ -88,7 +89,7 @@ export class ObjectInConstructionComponent implements OnInit {
       ];
       break;
       case 'units':
-      var valueArray = [
+      valueArray = [
         this.Connexion.getClientID(),
         this.Connexion.getSystem(),
         this.Connexion.getIntraPosition(),

@@ -67,7 +67,7 @@ export class TechnologiesComponent implements OnInit {
     });
   }
 
-  updateTechs(tech,upOrDown){
+  updateTechs(tech: any,upOrDown: any){
 
     var currentTechLevel;
 

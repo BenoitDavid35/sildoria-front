@@ -55,7 +55,7 @@ export class BuildingsComponent implements OnInit {
     });
   }
 
-  updateBuilding(building,upOrDown){
+  updateBuilding(building: any,upOrDown: any){
 
     var currentBuildingLevel;
 

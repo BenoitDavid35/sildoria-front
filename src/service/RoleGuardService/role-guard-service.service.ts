@@ -10,7 +10,7 @@ export class RoleGuardServiceService implements CanActivate {
   constructor(public auth: ConnexionService, public router: Router) {}
   canActivate(route: ActivatedRouteSnapshot): boolean {    // this will be passed from the route config
     // on the data property
-    const expectedRole = route.data.expectedRole;
+    const expectedRole = route.data['expectedRole'];
     const currentRole = this.auth.getClientRole();    // decode the token to get its payload
     if ( !this.auth.getConnected() || currentRole !== expectedRole ) {
       this.router.navigate(['connexion']);

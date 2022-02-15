@@ -22,7 +22,7 @@ export class ShipyardComponent implements OnInit {
   inputValue: any;
   objectToDisplay: string = 'units_building';
   maxUnits: any;
-  name: string;
+  name: string = '';
 
   ngOnInit(): void  {
     this.callserver();
@@ -47,7 +47,7 @@ export class ShipyardComponent implements OnInit {
     });
   }
 
-  updateUnits(units,upOrDown){
+  updateUnits(units: any,upOrDown: any){
 
     var currentUnitLevel;
 
@@ -76,7 +76,7 @@ export class ShipyardComponent implements OnInit {
     });
   }
 
-  maxUnitsFunction(unit){
+  maxUnitsFunction(unit: any){
     var valueArray = [
       this.Connexion.getClientID(),
       this.Connexion.getSystem(),
@@ -102,7 +102,7 @@ export class ShipyardComponent implements OnInit {
     });
   }
 
-  inputKeyUp(unit,$event){
+  inputKeyUp(unit: any,$event: any){
     for(var i = 0;i<this.userUnits.length;i++){
       if(this.userUnits[i][3] = unit){
         this.userUnits[i][5] = $event.target.value;
@@ -110,7 +110,7 @@ export class ShipyardComponent implements OnInit {
     }
   }
 
-  buildUnits(unit,amount){
+  buildUnits(unit: any,amount: any){
     var valueArray = [
       this.Connexion.getClientID(),
       this.Connexion.getSystem(),

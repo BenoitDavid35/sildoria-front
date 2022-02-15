@@ -34,7 +34,7 @@ export class CreateAccountComponent implements OnInit {
     this.fileData = <File>fileInput.target.files[0];
   }
 
-  onSubmit(form){
+  onSubmit(form: any){
 
     this.display = '';
     this.userImageError = '';

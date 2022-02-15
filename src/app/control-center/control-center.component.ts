@@ -67,7 +67,7 @@ export class ControlCenterComponent implements OnInit {
     });
   }
 
-  updateUnits(units,upOrDown){
+  updateUnits(units: any,upOrDown: any){
 
     var currentUnitLevel;
 

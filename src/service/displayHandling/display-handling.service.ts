@@ -16,7 +16,7 @@ export class DisplayHandlingService {
         return this.componentToDisplay;
     }
   }
-  setComponentToDisplay(componentToDisplay){
+  setComponentToDisplay(componentToDisplay: any){
     this.componentToDisplay = componentToDisplay;
   }
 

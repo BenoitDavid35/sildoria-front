@@ -12,7 +12,7 @@ export class FleetActionComponent implements OnInit {
 
   constructor(private apiService: ApiCallService,public valueFormatter:ValueFormatterService, private Connexion: ConnexionService) { }
 
-  @Input() fleet: string[];
+  @Input() fleet: string;
   url: string = 'getOneFleet/';
   fleetContent: any;
   previousMissionEvent: any;
@@ -78,7 +78,7 @@ export class FleetActionComponent implements OnInit {
       }
     }
 
-    missionSelector(event,missionType){
+    missionSelector(event: any,missionType: any){
       event.target.classList.add('border');
       if(this.previousMissionEvent != undefined){
         this.previousMissionEvent.classList.remove('border');

@@ -36,7 +36,7 @@ export class SidebarComponent implements OnInit {
 
   ngOnInit(): void  {
     //Toggle Click Function
-    $("#menu-toggle").click(function(e) {
+    $("#menu-toggle").click(function(e: any) {
       e.preventDefault();
       $("#wrapper").toggleClass("toggled");
     });
@@ -46,7 +46,7 @@ export class SidebarComponent implements OnInit {
     // this.subscription = source.subscribe(val => this.ressourcesService.getRessources());
   }
 
-  changeInnerComponent(content){
+  changeInnerComponent(content: any){
     this.eraseOldComponent();
 
     if(content == 'planet_view'){

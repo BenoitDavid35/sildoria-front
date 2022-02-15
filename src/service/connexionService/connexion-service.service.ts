@@ -8,18 +8,18 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class ConnexionService {
 
-  private ClientSILA_ID: string;
-  private ClientMail: string;
-  private ClientID: string;
-  private ClientAvatar: string;
-  private ClientTimestamp: string;
-  private Connected: string;
-  private ClientPassword: string;
-  private ClientRole: string;
-  private ClientSystem: string;
-  private IntraPosition: string;
-  private Mass: string;
-  private Temperature: string;
+  private ClientSILA_ID: string = '';
+  private ClientMail: string = '';
+  private ClientID: string = '';
+  private ClientAvatar: string = '';
+  private ClientTimestamp: string = '';
+  private Connected: string = '';
+  private ClientPassword: string = '';
+  private ClientRole: string = '';
+  private ClientSystem: string = '';
+  private IntraPosition: string = '';
+  private Mass: string = '';
+  private Temperature: string = '';
 
   constructor(private cookieService: CookieService) {
     this.Connected = 'false';
@@ -29,7 +29,7 @@ export class ConnexionService {
     this.ClientSILA_ID = this.cookieService.get('clientSILA_ID');
     return this.ClientSILA_ID;
   }
-  setClientSILA_ID(clientSILA_ID){
+  setClientSILA_ID(clientSILA_ID: any){
     this.cookieService.set( 'clientSILA_ID',clientSILA_ID,1800,'Strict');
     this.ClientSILA_ID = clientSILA_ID;
   }
@@ -38,7 +38,7 @@ export class ConnexionService {
     this.ClientMail = this.cookieService.get('clientMail');
     return this.ClientMail;
   }
-  setClientMail(clientMail){
+  setClientMail(clientMail: any){
     this.cookieService.set( 'clientMail',clientMail,1800,'Strict');
     this.ClientMail = clientMail;
   }
@@ -47,7 +47,7 @@ export class ConnexionService {
     this.ClientID = this.cookieService.get('clientID');
     return this.ClientID;
   }
-  setClientID(clientID){
+  setClientID(clientID: any){
     this.cookieService.set( 'clientID',clientID,1800,'Strict');
     this.ClientID = clientID;
   }
@@ -56,7 +56,7 @@ export class ConnexionService {
     this.ClientAvatar = this.cookieService.get('clientAvatar');
     return this.ClientAvatar;
   }
-  setClientAvatar(clientAvatar){
+  setClientAvatar(clientAvatar: any){
     clientAvatar = 'http://localhost:8888/images-api/' + clientAvatar;
     this.cookieService.set( 'clientAvatar',clientAvatar,1800,'Strict');
     this.ClientAvatar = clientAvatar;
@@ -66,7 +66,7 @@ export class ConnexionService {
     this.ClientTimestamp = this.cookieService.get('timestamp');
     return this.ClientTimestamp;
   }
-  setClientTimestamp(timestamp){
+  setClientTimestamp(timestamp: any){
     this.cookieService.set( 'timestamp',timestamp,1800,'Strict');
     this.ClientTimestamp = timestamp;
   }
@@ -79,7 +79,7 @@ export class ConnexionService {
     this.Connected = this.cookieService.get('connected');
     return this.Connected;
   }
-  setConnected(connected){
+  setConnected(connected: any){
     this.cookieService.set( 'connected',connected,1800,'Strict');
     this.Connected = connected;
   }
@@ -88,7 +88,7 @@ export class ConnexionService {
     this.ClientPassword = this.cookieService.get('clientPassword');
     return this.ClientPassword;
   }
-  setClientPassword(clientPassword){
+  setClientPassword(clientPassword: any){
     this.cookieService.set( 'clientPassword',clientPassword,1800,'Strict');
     this.ClientPassword = clientPassword;
   }
@@ -97,7 +97,7 @@ export class ConnexionService {
     this.ClientRole = this.cookieService.get('clientRole');
     return this.ClientRole;
   }
-  setClientRole(clientRole){
+  setClientRole(clientRole: any){
     this.cookieService.set( 'clientRole',clientRole,1800,'Strict');
     this.ClientRole = clientRole;
   }
@@ -106,7 +106,7 @@ export class ConnexionService {
     this.ClientSystem = this.cookieService.get('clientSystem');
     return this.ClientSystem;
   }
-  setSystem(clientSystem){
+  setSystem(clientSystem: any){
     this.cookieService.set( 'clientSystem',clientSystem,1800,'Strict');
     this.ClientSystem = clientSystem;
   }
@@ -115,7 +115,7 @@ export class ConnexionService {
     this.IntraPosition = this.cookieService.get('intraPosition');
     return this.IntraPosition;
   }
-  setIntraPosition(intraPosition){
+  setIntraPosition(intraPosition: any){
     this.cookieService.set( 'intraPosition',intraPosition,1800,'Strict');
     this.IntraPosition = intraPosition;
   }
@@ -124,7 +124,7 @@ export class ConnexionService {
     this.Mass = this.cookieService.get('mass');
     return this.Mass;
   }
-  setMass(mass){
+  setMass(mass: any){
     this.cookieService.set( 'mass',mass,1800,'Strict');
     this.Mass = mass;
   }
@@ -133,7 +133,7 @@ export class ConnexionService {
     this.Temperature = this.cookieService.get('temperature');
     return this.Temperature;
   }
-  setTemperature(temperature){
+  setTemperature(temperature: any){
     this.cookieService.set( 'temperature',temperature,1800,'Strict');
     this.Temperature = temperature;
   }

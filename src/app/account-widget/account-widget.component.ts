@@ -10,8 +10,8 @@ export class AccountWidgetComponent implements OnInit {
 
   constructor(private Connexion: ConnexionService) { }
 
-  Avatar: String;
-  Connected: String;
+  Avatar: String = '';
+  Connected: String = '';
 
   ngOnInit(): void  {
     this.Avatar = this.Connexion.getClientAvatar();

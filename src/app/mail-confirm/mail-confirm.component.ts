@@ -17,7 +17,7 @@ export class MailConfirmComponent implements OnInit {
   errorConfirm: string = '';
 
   constructor(private activatedRoute: ActivatedRoute,private apiService: ApiCallService) {
-    this.confirm_token = this.activatedRoute.snapshot.params.confirm_token;
+    this.confirm_token = this.activatedRoute.snapshot.params['confirm_token'];
   }
 
   ngOnInit(): void  {
@@ -29,7 +29,7 @@ export class MailConfirmComponent implements OnInit {
     }
   }
 
-  validateAccount(confirm_token) {
+  validateAccount(confirm_token: any) {
     var valueArray = [
       confirm_token
     ];
