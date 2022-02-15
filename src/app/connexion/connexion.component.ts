@@ -25,6 +25,7 @@ export class ConnexionComponent implements OnInit {
   }
 
   onSubmit(){
+    this.creds = '';
     var password = this.EncrDecr.set(this.password);
     this.credentials = this.apiService.callServer(this.url,[this.login,password])
     .subscribe(resp => {
