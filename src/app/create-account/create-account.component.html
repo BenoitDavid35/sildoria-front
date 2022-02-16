@@ -80,8 +80,10 @@
           <div *ngIf="display">
             {{display}}
           </div>
-          <div class="row">
+          <div class="row" align="center">
             <input type="submit" class="btn btn-primary" value="Créer mon compte" >
+            <p>Déjà un compte ?</p>
+            <a [routerLink]="'/connexion'" class="disconnected">Créer un compte</a>
           </div>
           <div class="row">
             <p>En créant votre compte, vous acceptez les conditions d'utilisation de Sila.</p>

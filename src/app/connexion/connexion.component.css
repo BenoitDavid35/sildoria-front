@@ -10,7 +10,9 @@ h2{
 }
 
 button{
+  margin-top: 10px;
   margin-bottom: 7px;
+  max-width: 200px;
 }
 
 app-footer{
@@ -18,4 +20,8 @@ app-footer{
   left: 0;
   bottom: 0;
   width: 100%;
+}
+
+label{
+  max-width: 400px;
 }

@@ -10,6 +10,7 @@ import { ConnexionComponent } from './connexion/connexion.component';
 import { PlanetViewComponent } from './planet-view/planet-view.component';
 import { AccountComponent } from './account/account.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { NotConnectedUserWelcomeComponent } from './not-connected-user-welcome/not-connected-user-welcome.component';
 
 const routes: Routes = [
   {path: '', component: SidebarComponent},
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path: 'mail_confirmation/:confirm_token', component: MailConfirmComponent},
   {path: 'account-settings', component: AccountComponent},
   {path: 'connexion', component: ConnexionComponent},
+  {path: 'user', component: NotConnectedUserWelcomeComponent},
   {path: 'not-found', component: FourOhFourComponent},
   {path: '**', redirectTo: '/not-found'}
 ];

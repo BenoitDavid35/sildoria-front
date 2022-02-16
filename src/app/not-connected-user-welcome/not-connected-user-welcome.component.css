@@ -1,0 +1,25 @@
+.topSpace{
+  margin-top: 5%;
+}
+
+div{
+  border: solid 1px black;
+}
+
+.video{
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+.social {
+  padding: 15px;
+  margin: 5px;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-connexion{
+  padding: 10px;
+}

@@ -1,6 +1,6 @@
 <div class="login-main">
   <div class="row justify-content-center">
-    <div class="col-sm-4 login-card">
+    <div class="col-sm-7 login-card">
       <div class="row justify-content-center">
         <h2>Connexion</h2>
       </div>
@@ -17,8 +17,10 @@
             <input type="password" class="form-control" id="pwdConfirm" name="input_password" [(ngModel)]="password">
           </div>
         </div>
-        <div class="row justify-content-center">
+        <div class="row justify-content-center" align="center">
           <button type="button" class="btn btn-primary" (click)="onSubmit()">Connexion</button>
+          <p>Pas de compte ?</p>
+          <a [routerLink]="'/create-account'" class="disconnected">Créer un compte</a>
         </div>
     </div>
   </div>

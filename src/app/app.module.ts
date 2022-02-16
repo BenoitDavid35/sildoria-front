@@ -33,6 +33,7 @@ import { ShipyardComponent } from './shipyard/shipyard.component';
 import { FleetComponent } from './fleet/fleet.component';
 import { CreateNewFleetComponent } from './create-new-fleet/create-new-fleet.component';
 import { FleetActionComponent } from './fleet-action/fleet-action.component';
+import { NotConnectedUserWelcomeComponent } from './not-connected-user-welcome/not-connected-user-welcome.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { FleetActionComponent } from './fleet-action/fleet-action.component';
     ShipyardComponent,
     FleetComponent,
     CreateNewFleetComponent,
-    FleetActionComponent
+    FleetActionComponent,
+    NotConnectedUserWelcomeComponent
   ],
   imports: [
     BrowserModule,
